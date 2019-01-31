@@ -1,13 +1,168 @@
 ﻿<!DOCTYPE html>
 
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
-	<head>
-		<meta charset="utf-8" />
-		<title>
-			the project
-		</title>
-	</head>
-	<body>
+<head>
+	<meta charset="utf-8" />
+	<title>
+		the project
+	</title>
 
-	</body>
+	<style>
+		body 
+		{
+			margin: 0;
+			padding: 0;
+		}
+		div.mainGrid 
+		{
+			display: grid;
+			margin-left:10em;
+			grid-gap: 1em;
+			/*grid-template-columns: 2fr 0fr; padding: 1em;
+			grid-template-rows: 100px 50px;*/
+			grid-template-areas: 
+				'MainHeader' 'SecondHeader' 'ThirdHeader' 
+				'IntroductionText' 'Alignment' 'HitDice' 
+				'StartingWealth' 'ClassSkills' 'ClassSkillsText' 
+				'SkillRanksPerLevel' 'TableAlchemist' 'TableAlchemistTable';
+			font-family:'Times New Roman', Times, serif;
+			/*height: 100vh;
+			width: 100vw;*/
+		}
+
+		div.MainHeader 
+		{
+			/*color: cadetblue;*/
+			background-color: burlywood;
+			grid-area: MainHeader;
+			text-anchor:start;
+
+		}
+
+		div.SecondHeader {
+			/*background-color:#ddd;*/
+			grid-area: SecondHeader;
+		}
+
+		.ThirdHeader {
+			/*background-color:#eee;*/
+			grid-area: ThirdHeader;
+			margin-right: auto;
+		}
+
+		.IntroductionText {
+			grid-area: IntroductionText;
+			grid-row: 3;
+			margin-left: 7em;
+			margin-top:1.3em;
+			/*background-color: aqua;*/
+		}
+		.Alignment {
+			grid-area: Alignment;
+			/*background-color:dimgray;*/
+			grid-row: 4;
+		}
+		.HitDice {
+			grid-area: HitDice;
+			/*background-color:gray;*/
+		}
+		.StartingWealth {
+			grid-area: StartingWealth;
+			/*background-color:dimgrey;*/
+		}
+		.ClassSkills {
+			grid-area: ClassSkills;
+			/*background-color:grey;*/
+			margin-right: auto;
+		}
+		.ClassSkillsText {
+			grid-area: ClassSkillsText;
+			/*background-color:dimgrey;*/
+			margin-left: 7em;
+			margin-right: 40em;
+			margin-top:1.3em;
+			grid-row: 8/9;
+		}
+		.SkillRanksPerLevel {
+			grid-area: SkillRanksPerLevel;
+			/*background-color:gray;*/
+		}
+		.TableAlchemist {
+			grid-area: TableAlchemist;
+			/*background-color:dimgrey;*/
+		}
+		.TableAlchemistTable {
+			grid-area: TableAlchemistTable;
+			/*background-color:dimgrey;*/
+		}
+			.TableAlchemistTable > img 
+			{
+				object-fit:cover;
+				width:100%;
+			}
+	</style>
+</head>
+<body>
+	<div class="mainGrid">
+		<div class="MainHeader">
+			<h1>
+				Class
+			</h1>
+		</div>
+		<div class="SecondHeader">
+			<h2>
+				Alchemist
+			</h2>
+		</div>
+		<div class="ThirdHeader">
+			<h3>
+				Introduction
+			</h3>
+		</div>
+		<div class="IntroductionText">
+			The Alchemist is one who is especially interested and skilled in the alchemical arts and often do this as a profession or hobby. An Alchemist will often try to solve problems and challenges put before him using this skill set. Alchemists are often above average intelligent people as alchemy is limited to those with the intellect to grasp it. The Alchemist's reasons for adventuring often aligns with interests of finding other places with different knowledge of alchemy he can learn or to find new ingredients to either improve formulas with or develop new formulas with. That said this interest does not encumber the Alchemist from dedicating himself to other situations that may erupt during his travels.
+		</div>
+		<div class="Alignment">
+			<h3>
+				Alignment:<em> Any</em>
+			</h3>
+		</div>
+		<div class="HitDice">
+			<h3 >
+				Hit Dice:<em> d8</em>
+			</h3>
+		</div>
+		<div class="StartingWealth">
+			<h3>
+				Starting Wealth:<em> 3d6 x 10gp (average 105gp.) in addition, each character starts out with an outfit worth up to 10gp or less.</em>
+			</h3>
+		</div>
+		<div class="ClassSkills">
+			<h3>
+				Class Skills:
+			</h3>
+		</div>
+		<div class="ClassSkillsText">
+			Appraise (Int), Craft (any) (Int), Disable Device (Dex),<br />
+			Fly (Dex), Heal (Wis), Knowledge (arcana) (Int),<br />
+			Knowledge(nature) (Int), Perception (Wis), Profession (Wis),<br />
+			Sleight of Hand (Dex), Spellcraft (Int), Survival (Wis), Use Magic Device (Cha).
+		</div>
+		<div class="SkillRanksPerLevel">
+			<h3>
+				Skill Ranks per Level:<em> 4 + Int modifier</em>
+			</h3>
+		</div>
+		<div class="TableAlchemist">
+			<h3>
+				Table Alchemist:
+			</h3>
+		</div>
+		<div class="TableAlchemistTable">
+			<img src="TableAlchemist.png" alt="Alchemist Table" />
+		</div>
+	</div>
+
+
+</body>
 </html>
