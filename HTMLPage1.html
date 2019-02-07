@@ -1,0 +1,75 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>
+
+    </title>
+
+    <style>
+        .TestClass {
+            color: red;
+        }
+    </style>
+    <script>
+        function TestFunction()
+        {
+            document.getElementsByClassName("TestClass")[0].innerHTML = "hello";
+        }
+    </script>
+</head>
+
+<body>
+    <h1 class="TestClass" onclick="TestFunction()">hei</h1>
+    <p id="ParaID">denne sier hei</p>
+
+    <script>
+        document.getElementById("ParaID").innerHTML = "denne sier ikke hei lengre"
+        document.write("hello");
+        console.log("console test")
+
+        function TestButton()
+        {
+            window.alert(5 + 6);
+            document.getElementById("Clark").innerHTML ="<a href='http://www.d20pfsrd.com/'>Link To DND</a>"
+        }
+
+        var MyNumber = 5;
+        var MyWord = "hello";
+        var IsDone = false;
+        function ifStatement ()
+        {
+            if (!IsDone)
+            {
+                //+= answer
+                IsDone = true;
+            }
+        }
+        var MyObject =
+        {
+            ObjectPropertyOne: "cyka",
+            ObjectPropertyTwo: 5,
+            ObjectPropertyThree: "Blyat",
+            fullName: function ()
+            {
+                return this.ObjectPropertyOne + "" + this.ObjectPropertyThree;
+            }
+        };
+
+        function SayMyName()
+        {
+            document.getElementById("buddy").innerHTML = MyObject.ObjectPropertyOne + MyObject.ObjectPropertyThree;
+        }
+        //this is how javascript comments work
+    </script>
+
+    <button id="buddy" onclick="SayMyName()">my name is</button>
+
+    <button id="Clark" onclick="TestButton()">
+        and this is.
+    </button>
+
+</body>
+
+</html>
